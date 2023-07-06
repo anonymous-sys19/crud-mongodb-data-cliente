@@ -1,0 +1,76 @@
+<!-- views/clientes/edit.handlebars -->
+
+<div class="cont container">
+  <div class="item">
+    <h2>Editar Cliente</h2>
+    <form
+      action="/clientes/{{cliente._id}}?_method=PUT"
+      method="POST"
+      class="item"
+    >
+      <div class="cont container">
+        <div class="item">
+          <label for="name" class="">Nombre</label>
+          <input
+            type="text"
+            id="name"
+            name="nombre"
+            placeholder="Nombre"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            required
+            value="{{cliente.nombre}}"
+          />
+        </div>
+        <div class="item">
+          <label for="name" class="">Precio App</label>
+          <input
+            type="number"
+            name="precioApp"
+            placeholder="PrecioApp"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            step="0.001"
+            required
+            value="{{cliente.precioApp}}"
+            step="0.001"
+          />
+        </div>
+        <div class="item">
+          <label for="name" class="">Precio</label>
+          <input
+            type="number"
+            name="precio"
+            placeholder="Precio"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            step="0.001"
+            required
+            value="{{cliente.precio}}"
+            step="0.001"
+          />
+        </div>
+        <div class="item">
+          <label for="name" class="">Cant Articulo</label>
+          <input
+            type="number"
+            name="cantArticulo"
+            placeholder="Cantidad de Articulos"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            step="0.001"
+            required
+            value="{{cliente.cantArticulo}}"
+          />
+        </div>
+
+        <div class="item buttom-div">
+          <button
+            type="submit"
+            class="btn btn-primary bottom"
+          >Actualizar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

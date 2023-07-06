@@ -1,0 +1,50 @@
+<!-- views/partials/clientTable.handlebars -->
+
+<div class="">
+  <h2>Clientes</h2>
+  <table class="display nowrap table table-dark table-hover" id="myTable" style="width:100%">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">P:App</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Pendiente</th>
+        <th scope="col">CantArticulos</th>
+        <th scope="col">Ganancia</th>
+        <th scope="col">Actualizar</th>
+        <th scope="col">Eliminar</th>
+        <th scope="col">pagar</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each clientes}}
+        <tr>
+          <td>{{nombre}}</td>
+          <td>${{precioApp}}</td>
+          <td>₡{{precio}}</td>
+          <td>₡{{deuda}}</td>
+          <td>{{cantArticulo}}</td>
+          <td>₡{{ganancia}}</td>
+          <td><a
+              href="/clientes/{{_id}}/edit"
+              class="btn btn-secondary"
+            >Editar</a></td>
+          <td>
+            <form action="/clientes/{{_id}}?_method=DELETE" method="POST" class="formTable">
+              <button type="submit" class="btn btn-danger">Eliminar</button>
+            </form>
+
+          </td>
+          <td>
+            <form action="/clientes/{{_id}}/pagar" method="POST" class="formTableP">
+              <input type="number" name="monto" placeholder="Monto del pago" />
+              <button type="submit">Realizar Pago</button>
+            </form>
+
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</div>

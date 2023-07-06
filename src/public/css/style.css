@@ -1,0 +1,113 @@
+
+.cont {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+    margin: auto;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+}
+
+/* .cont-Article {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+} */
+
+.item {
+    /* clase para item selectivo and resposiv */
+    flex: 1 1 150px;
+    text-align: center;
+    margin: auto;
+    padding: 0.3rem;
+}
+
+.form-client {
+    /* 
+    border: 2px azure double;
+    text-align: center; */
+    width: auto;
+    margin: auto;
+
+
+}
+
+.contenido {
+    width: 60%;
+    margin: auto;
+}
+
+.form-client h2,
+.item h2 {
+    color: #f3f3f3;
+    text-align: center;
+}
+
+/* .contenido {
+    display: grid;
+    justify-content: center;
+} */
+
+.col-auto {
+    width: -webkit-fill-available !important;
+}
+
+form {
+    display: grid;
+    width: 30rem;
+    margin: auto;
+
+}
+
+form label {
+    color: antiquewhite;
+    font-weight: 500;
+    margin: 0.5rem;
+
+}
+
+.contenido .buttom-div {
+    padding: 1rem 0 0 0;
+}
+
+.buttom-div button {
+    width: -webkit-fill-available;
+    margin: 0 1rem;
+}
+
+/* tabla de clientes */
+div.dataTables_wrapper {
+    /* width: 800px;
+    margin: 0 auto; */
+}
+
+.formTable {
+    display: inherit !important;
+    width: 0;
+}
+
+.formTable button {
+    width: fit-content;
+}
+
+.formTableP {
+    display: inherit !important;
+    width: fit-content;
+}
+
+
+.buttom-div {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+}
+.bottom {
+    width: -webkit-fill-available;
+    margin: 1rem 10rem;
+}

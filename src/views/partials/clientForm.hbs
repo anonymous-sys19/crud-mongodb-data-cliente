@@ -1,0 +1,65 @@
+<!-- views/partials/clientForm.handlebars -->
+
+<div class="cont container">
+  <div class="item">
+    <h2>Agregar Cliente</h2>
+    <form action="/clientes" method="POST" class="item">
+      <div class="cont container">
+        <div class="item">
+          <label for="name" class="">Nombre</label>
+          <input
+            type="text"
+            id="name"
+            name="nombre"
+            placeholder="Nombre"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            required
+          />
+        </div>
+
+        <div class="item">
+          <label for="name" class="">Precio App</label>
+          <input
+            type="number"
+            name="precioApp"
+            placeholder="PrecioApp"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            step="0.001"
+            required
+          />
+        </div>
+        <div class="item">
+          <label for="name" class="">Precio</label>
+          <input
+            type="number"
+            name="precio"
+            placeholder="Precio"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            step="0.001"
+            required
+          />
+        </div>
+
+        <div class="item">
+          <label for="name" class="">Cant Articulo</label>
+          <input
+            type="number"
+            name="cantArticulo"
+            placeholder="Cantidad de Articulos"
+            class="form-control form-control-sm"
+            aria-label=".form-control-sm example"
+            step="0.001"
+            required
+          />
+        </div>
+
+        <div class="item buttom-div">
+          <button type="submit" class="btn btn-primary bottom">Agregar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
