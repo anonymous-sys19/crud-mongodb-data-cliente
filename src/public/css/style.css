@@ -111,3 +111,10 @@ div.dataTables_wrapper {
     width: -webkit-fill-available;
     margin: 1rem 10rem;
 }
+
+
+h2{
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}

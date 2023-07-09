@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 
 const clienteSchema = new mongoose.Schema({
   nombre: { type: String, required: true },
-  precioApp: { type: Number, requires: true },
-  precio: { type: Number, required: true },
-  deuda: { type: Number, required: true },
+  precioApp: { type: mongoose.Types.Decimal128, requires: true },
+  precio: { type: mongoose.Types.Decimal128, required: true },
+  deuda: { type: mongoose.Types.Decimal128, required: true },
   cantArticulo: { type: Number, required: true },
-  ganancia: { type: Number, required: true},
+  ganancia: { type: mongoose.Types.Decimal128, required: true},
 
 });
 

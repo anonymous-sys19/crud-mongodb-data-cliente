@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <style>
+      .calculator {
+        {{!-- width: 200px;
+        margin: 50px auto;
+        padding: 10px; --}}
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+      }
+
+      #display {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+      }
+
+      .buttons button {
+        width: 40px;
+        height: 40px;
+        margin: 2px;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" id="display" readonly />
+      <div class="buttons">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="deleteLastCharacter()">&larr;</button>
+        <button onclick="appendNumber(9)">9</button>
+        <button onclick="appendNumber(8)">8</button>
+        <button onclick="appendNumber(7)">7</button>
+        <button onclick="appendNumber(6)">6</button>
+        <button onclick="appendNumber(5)">5</button>
+        <button onclick="appendNumber(4)">4</button>
+        <button onclick="appendNumber(3)">3</button>
+        <button onclick="appendNumber(2)">2</button>
+        <button onclick="appendNumber(1)">1</button>
+        <button onclick="appendNumber(0)">0</button>
+        <button onclick="appendDecimal()">.</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="appendOperator('*')">*</button>
+        <button onclick="appendOperator('+')">+</button>
+        <button onclick="appendOperator('-')">-</button>
+        <button onclick="appendOperator('/')">/</button>
+      </div>
+    </div>
+    <script>
+      let currentExpression = "";
+      let display = document.getElementById("display");
+
+      function appendNumber(number) {
+        currentExpression += number;
+        display.value = currentExpression;
+      }
+
+      function appendOperator(operator) {
+        if (currentExpression !== "") {
+          currentExpression += operator;
+          display.value = currentExpression;
+        }
+      }
+
+      function appendDecimal() {
+        if (!currentExpression.includes(".")) {
+          currentExpression += ".";
+          display.value = currentExpression;
+        }
+      }
+
+      function deleteLastCharacter() {
+        currentExpression = currentExpression.slice(0, -1);
+        display.value = currentExpression;
+      }
+
+      function clearDisplay() {
+        currentExpression = "";
+        display.value = currentExpression;
+      }
+
+      function calculate() {
+        if (currentExpression !== "") {
+          try {
+            const result = eval(currentExpression);
+            currentExpression = String(result);
+            display.value = currentExpression;
+          } catch (error) {
+            display.value = "Error";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
